@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div
+      class="w-full min-h-screen flex justify-center items-center bg-blue-600"
+    >
+      <div class="w-[500px] bg-white p-[50px] rounded-[12px]">
+        <h1 class="text-center text-[32px] font-bold">English Dictionary</h1>
+        <div class="pt-[30px] flex relative">
+          <span class="absolute left-[10px] top-[42px]">
+            <i
+              class="fa-solid fa-magnifying-glass text-gray-400 text-[18px] searchBtn"
+            ></i>
+          </span>
+          <input
+            type="text"
+            class="w-full h-[50px] text-[18px] border-none outline outline-2 outline-gray-400 focus:outline-blue-600 pl-[40px] rounded-md searchInput"
+            placeholder="Search a word"
+          />
+          <span
+            class="absolute right-[10px] top-[42px] text-gray-400 hidden closeBtn"
+          >
+            <i
+              class="fa-solid fa-xmark text-[20px] cursor-pointer cancelBtn"
+            ></i>
+          </span>
+        </div>
+        <p class="pt-[20px] text-gray-400 infoText">
+          Type a word and press enter to get meaning, example, pronounciation,
+          and synonyms of that typed word.
+        </p>
+        <div class="wrapper hidden">
+          <div class="py-[20px] flex justify-between items-center">
+            <section>
+              <h2 class="font-semibold text-[26px] dictionary-word"></h2>
+              <div class="flex justify-center items-center gap-[20px]">
+                <p class="text-[18px] text-gray-400 partsofspeech"></p>
+                <p class="text-[18px] text-gray-400 phonetic"></p>
+              </div>
+            </section>
+            <section>
+              <span>
+                <i
+                  class="fa-solid fa-volume-high text-gray-400 text-[22px] cursor-pointer audioBtn"
+                ></i>
+              </span>
+            </section>
+          </div>
+          <hr class="border-none h-[1px] bg-gray-400 text-gray-400" />
+          <div class="my-[20px] meaning styling-left">
+            <h3 class="text-[22px] font-semibold">Meaning</h3>
+            <p class="text-[18px] text-gray-400 meaning-para"></p>
+          </div>
+          <hr class="border-none h-[1px] bg-gray-400 text-gray-400" />
+          <div class="my-[20px] example styling-left">
+            <h3 class="text-[22px] font-semibold">Example</h3>
+            <p class="text-[18px] text-gray-400 example-para"></p>
+          </div>
+          <hr class="border-none h-[1px] bg-gray-400 text-gray-400" />
+          <div class="my-[20px] synonyms styling-left">
+            <h3 class="text-[22px] font-semibold">Synonyms</h3>
+            <p
+              class="text-[18px] text-gray-400 *:underline *:cursor-pointer flex gap-1 synonym-para"
+            ></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

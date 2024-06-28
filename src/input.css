@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper.active {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.styling-left {
+  padding-left: 10px;
+  border-radius: 4px 0 0 4px;
+  border-left: 3px solid rgb(37, 99, 235);
+}
